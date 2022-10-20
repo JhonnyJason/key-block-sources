@@ -1,22 +1,22 @@
 {
   "name": "key-block",
   "version": "0.0.1",
-  "description": "",
+  "description": "Small code to block a certain string key for a certain time.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
+  "keywords": ["key", "blocking", "block", "time"],
   "author": "Lenard Frommelt lenard@frommelt.dev",
   "license": "Unlicense",
   "repository": {
     "type": "git",
-    "url": "git+https://.git"
+    "url": "git+https://github.com/JhonnyJason/key-block-output.git"
   },
   "bugs": {
-    "url": "https://"
+    "url": "https://github.com/JhonnyJason/key-block/issues"
   },
-  "homepage": "https://",
+  "homepage": "https://github.com/JhonnyJason/key-block-output#readme",
   "dependencies": {},
   "type": "module"
 }
