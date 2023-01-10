@@ -16,12 +16,12 @@ Installation
 ------------
 Current git version:
 ```
-npm install -g git+https://github.com/JhonnyJason/key-block-output.git
+npm install git+https://github.com/JhonnyJason/key-block-output.git
 ```
 
 Npm Registry
 ```
-npm install -g key-block
+npm install key-block
 ```
 
 Use
@@ -34,15 +34,22 @@ Thus we have the `blockOrThrow` function.
 - After the `blockingTime` has passed the key is automatically unblocked - ready to be blocked again :-)
 
 ```coffee
-import { setBlockingTimeMS, blockOrThrow } from "key-block"
+import { setBlockingTimeMS, blockOrThrow, passOrThrow, isBlocked } from "key-block"
 
 # setting the default  default is 10000ms
 setBlockingTimeMS(300000)
 
+isBlocked("hell") # false
+passOrThrow("hell") # passes
 blockOrThrow("hell") # all fine
+
+isBlocked("hell") # true
+passOrThrow("hell") # -> Error Exception "Key hell is blocked!"
 blockOrThrow("hell") # -> Error Exception "Key hell is blocked!"
 
 ## after ~300000ms
+isBlocked("hell") # false
+passOrThrow("hell") # passes again
 blockOrThrow("hell") # all fine again
 
 ```
